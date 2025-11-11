@@ -128,7 +128,7 @@ with st.container():
     predict = st.button("Predict")
 
     # -------------- API call --------------
-    API_URL = "https://loan-api-29u8.onrender.com/predict"
+    API_URL = "https://loan-api-z9u8.onrender.com/predict"
 
     if predict:
         payload = {
