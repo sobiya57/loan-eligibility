@@ -20,6 +20,10 @@ pipeline = joblib.load(MODEL_PATH)
 def root():
     return {"status": "ok", "msg": "Loan Eligibility API is running."}
 
+@app.head("/")
+def head_root():
+    return {"status": "ok"}
+
 @app.post("/predict", response_model=PredictionOut)
 def predict(payload: LoanApplication):
     df = pd.DataFrame([payload.dict()])
