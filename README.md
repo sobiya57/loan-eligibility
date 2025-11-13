@@ -26,16 +26,18 @@ It provides both:
 
 ---
 
-## 🏗️ System Architecture
+## 🏛️ System Architecture
 
 ```mermaid
 flowchart TD
-    A[👤 User] --> B[🖥️ Streamlit UI (loan-ui)]
-    B --> C[⚙️ FastAPI Backend (loan-api)]
-    C --> D[🤖 ML Model (Random Forest)]
-    D --> C
-    C -->|Prediction + Probability| B
-    B --> A
+  A[User] --> B(Loan UI)
+  B --> C(API)
+  C --> D(Model)
+  D --> C
+  C --> B
+  B --> A
+```
+
 
 ## 🖼️ Screenshots
 
@@ -137,3 +139,4 @@ Sobiya Begum
 🌍 GitHub Profile
 
 📧 Contact: – sobiyabegumbegum@gmail.com
+## 🏛️ System Architecture
