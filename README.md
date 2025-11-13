@@ -106,9 +106,9 @@ Run the Streamlit app:
 
 streamlit run app/streamlit_app.py
 
-📁 **Folder Structure**
+### 📁 Folder Structure
 
----
+```
 loan-eligibility/
 ├── app/
 │   ├── api.py
@@ -125,7 +125,7 @@ loan-eligibility/
 ├── requirements.txt
 ├── runtime.txt
 └── README.md
----
+```
 
 🤝 Contributing
 
