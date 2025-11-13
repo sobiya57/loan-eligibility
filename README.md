@@ -108,6 +108,7 @@ streamlit run app/streamlit_app.py
 
 📁 **Folder Structure**
 
+---
 loan-eligibility/
 ├── app/
 │   ├── api.py
