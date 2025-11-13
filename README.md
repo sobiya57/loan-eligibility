@@ -110,20 +110,21 @@ streamlit run app/streamlit_app.py
 
 loan-eligibility/
 ├── app/
-│ ├── api.py
-│ ├── schema.py
-│ ├── streamlit_app.py
-│ ├── utils.py
-│ └── model/
-│ └── model.pkl
+│   ├── api.py
+│   ├── schema.py
+│   ├── streamlit_app.py
+│   ├── utils.py
+│   └── model/
+│       └── model.pkl
 ├── data/
-│ └── train.csv
+│   └── train.csv
 ├── docs/
-│ ├── ui_screenshot.png
-│ └── swagger_screenshot.png
+│   ├── ui_screenshot.png
+│   └── swagger_screenshot.png
 ├── requirements.txt
 ├── runtime.txt
 └── README.md
+---
 
 🤝 Contributing
 
