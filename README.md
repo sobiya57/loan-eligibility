@@ -5,6 +5,11 @@ Built using **FastAPI (Backend)** and **Streamlit (Frontend)** — and deployed 
 
 ---
 
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-API-green)
+![Streamlit](https://img.shields.io/badge/Streamlit-WebApp-red)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange)
+
 ## 📘 Overview
 
 This system helps financial institutions or users check **loan eligibility** instantly using a trained ML model (Random Forest Classifier).  
