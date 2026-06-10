@@ -132,14 +132,14 @@ with st.container():
 
     if predict:
 
-    if ApplicantIncome <= 0:
-        st.error("Applicant Income must be greater than 0")
+        if ApplicantIncome <= 0:
+            st.error("Applicant Income must be greater than 0")
 
-    elif LoanAmount <= 0:
-        st.error("Loan Amount must be greater than 0")
+        elif LoanAmount <= 0:
+            st.error("Loan Amount must be greater than 0")
 
-    elif Loan_Amount_Term <= 0:
-        st.error("Loan Term must be greater than 0")
+        elif Loan_Amount_Term <= 0:
+            st.error("Loan Term must be greater than 0")
 
     else:
         payload = {
@@ -166,7 +166,7 @@ with st.container():
                     f"Confidence Score: <b>{result.get('probability', 0) * 100:.1f}%</b></div>",
                     unsafe_allow_html=True
                 )
-            else:
+        else:
                 st.markdown(
                     f"<div class='result-no'>❌ <b>Loan Not Approved</b> — "
                     f"Confidence Score: <b>{result.get('probability', 0) * 100:.1f}%</b></div>",
