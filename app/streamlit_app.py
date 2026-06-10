@@ -129,55 +129,55 @@ with st.container():
 
     # -------------- API call --------------
     API_URL = "https://loan-api-z9u8.onrender.com/predict"
-
-    if predict:
-
-        if ApplicantIncome <= 0:
-            st.error("Applicant Income must be greater than 0")
-
-        elif LoanAmount <= 0:
-            st.error("Loan Amount must be greater than 0")
-
-        elif Loan_Amount_Term <= 0:
-            st.error("Loan Term must be greater than 0")
-
-    else:
-        payload = {
-            "Gender": Gender,
-            "Married": Married,
-            "Dependents": Dependents,
-            "Education": Education,
-            "Self_Employed": Self_Employed,
-            "Property_Area": Property_Area,
-            "ApplicantIncome": ApplicantIncome,
-            "CoapplicantIncome": CoapplicantIncome,
-            "LoanAmount": LoanAmount,
-            "Loan_Amount_Term": Loan_Amount_Term,
-            "Credit_History": Credit_History,
-        }
-        try:
-            r = requests.post(API_URL, json=payload, timeout=20)
-            r.raise_for_status()
-            result = r.json()
     
-            if result.get("approved"):
-                st.markdown(
-                    f"<div class='result-ok'>✅ <b>Loan Approved</b> — "
-                    f"Confidence Score: <b>{result.get('probability', 0) * 100:.1f}%</b></div>",
-                    unsafe_allow_html=True
-                )
-        else:
-                st.markdown(
-                    f"<div class='result-no'>❌ <b>Loan Not Approved</b> — "
-                    f"Confidence Score: <b>{result.get('probability', 0) * 100:.1f}%</b></div>",
-                    unsafe_allow_html=True
-                )
-        except Exception as e:
-            st.markdown(
-                f"<div class='result-no'>⚠️ <b>Unable to connect to API</b>. "
-                f"Please verify the API is live. <br/><small>{e}</small></div>",
-                unsafe_allow_html=True
-            )
+        if predict:
+        
+                if ApplicantIncome <= 0:
+                    st.error("Applicant Income must be greater than 0")
+        
+                elif LoanAmount <= 0:
+                    st.error("Loan Amount must be greater than 0")
+        
+                elif Loan_Amount_Term <= 0:
+                    st.error("Loan Term must be greater than 0")
+        
+            else:
+                payload = {
+                    "Gender": Gender,
+                    "Married": Married,
+                    "Dependents": Dependents,
+                    "Education": Education,
+                    "Self_Employed": Self_Employed,
+                    "Property_Area": Property_Area,
+                    "ApplicantIncome": ApplicantIncome,
+                    "CoapplicantIncome": CoapplicantIncome,
+                    "LoanAmount": LoanAmount,
+                    "Loan_Amount_Term": Loan_Amount_Term,
+                    "Credit_History": Credit_History,
+                }
+                try:
+                    r = requests.post(API_URL, json=payload, timeout=20)
+                    r.raise_for_status()
+                    result = r.json()
+            
+                    if result.get("approved"):
+                        st.markdown(
+                            f"<div class='result-ok'>✅ <b>Loan Approved</b> — "
+                            f"Confidence Score: <b>{result.get('probability', 0) * 100:.1f}%</b></div>",
+                            unsafe_allow_html=True
+                        )
+                else:
+                        st.markdown(
+                            f"<div class='result-no'>❌ <b>Loan Not Approved</b> — "
+                            f"Confidence Score: <b>{result.get('probability', 0) * 100:.1f}%</b></div>",
+                            unsafe_allow_html=True
+                        )
+                except Exception as e:
+                    st.markdown(
+                        f"<div class='result-no'>⚠️ <b>Unable to connect to API</b>. "
+                        f"Please verify the API is live. <br/><small>{e}</small></div>",
+                        unsafe_allow_html=True
+                    )
 
     st.markdown("</div>", unsafe_allow_html=True)
 
