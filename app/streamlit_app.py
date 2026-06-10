@@ -153,13 +153,13 @@ with st.container():
             if result.get("approved"):
                 st.markdown(
                     f"<div class='result-ok'>✅ <b>Loan Approved</b> — "
-                    f"Probability: <b>{result.get('probability', 0):.2f}</b></div>",
+                    f"Confidence Score: <b>{result.get('probability', 0) * 100:.1f}%</b>"</div>",
                     unsafe_allow_html=True
                 )
             else:
                 st.markdown(
                     f"<div class='result-no'>❌ <b>Loan Not Approved</b> — "
-                    f"Probability: <b>{result.get('probability', 0):.2f}</b></div>",
+                    f"Confidence Score: <b>{result.get('probability', 0) * 100:.1f}%</b>"</div>",
                     unsafe_allow_html=True
                 )
         except Exception as e:
