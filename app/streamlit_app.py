@@ -130,7 +130,7 @@ with st.container():
     # -------------- API call --------------
     API_URL = "https://loan-api-z9u8.onrender.com/predict"
     
-        if predict:
+    if predict:
         
                 if ApplicantIncome <= 0:
                     st.error("Applicant Income must be greater than 0")
