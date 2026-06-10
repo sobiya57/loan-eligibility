@@ -166,7 +166,7 @@ with st.container():
                             f"Confidence Score: <b>{result.get('probability', 0) * 100:.1f}%</b></div>",
                             unsafe_allow_html=True
                         )
-                else:
+                    else:
                         st.markdown(
                             f"<div class='result-no'>❌ <b>Loan Not Approved</b> — "
                             f"Confidence Score: <b>{result.get('probability', 0) * 100:.1f}%</b></div>",
