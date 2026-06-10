@@ -132,14 +132,14 @@ with st.container():
 
     if predict:
 
-    if ApplicantIncome <= 0:
-        st.error("Applicant Income must be greater than 0")
+        if ApplicantIncome <= 0:
+            st.error("Applicant Income must be greater than 0")
 
-    elif LoanAmount <= 0:
-        st.error("Loan Amount must be greater than 0")
+        elif LoanAmount <= 0:
+            st.error("Loan Amount must be greater than 0")
 
-    elif Loan_Amount_Term <= 0:
-        st.error("Loan Term must be greater than 0")
+        elif Loan_Amount_Term <= 0:
+            st.error("Loan Term must be greater than 0")
 
     else:
         payload = {
