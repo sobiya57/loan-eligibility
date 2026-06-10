@@ -155,29 +155,29 @@ with st.container():
             "Loan_Amount_Term": Loan_Amount_Term,
             "Credit_History": Credit_History,
         }
-            try:
-                r = requests.post(API_URL, json=payload, timeout=20)
-                r.raise_for_status()
-                result = r.json()
+        try:
+            r = requests.post(API_URL, json=payload, timeout=20)
+            r.raise_for_status()
+            result = r.json()
     
-                if result.get("approved"):
-                    st.markdown(
-                        f"<div class='result-ok'>✅ <b>Loan Approved</b> — "
-                        f"Confidence Score: <b>{result.get('probability', 0) * 100:.1f}%</b></div>",
-                        unsafe_allow_html=True
-                    )
-                else:
-                    st.markdown(
-                        f"<div class='result-no'>❌ <b>Loan Not Approved</b> — "
-                        f"Confidence Score: <b>{result.get('probability', 0) * 100:.1f}%</b></div>",
-                        unsafe_allow_html=True
-                    )
-            except Exception as e:
+            if result.get("approved"):
                 st.markdown(
-                    f"<div class='result-no'>⚠️ <b>Unable to connect to API</b>. "
-                    f"Please verify the API is live. <br/><small>{e}</small></div>",
+                    f"<div class='result-ok'>✅ <b>Loan Approved</b> — "
+                    f"Confidence Score: <b>{result.get('probability', 0) * 100:.1f}%</b></div>",
                     unsafe_allow_html=True
                 )
+            else:
+                st.markdown(
+                    f"<div class='result-no'>❌ <b>Loan Not Approved</b> — "
+                    f"Confidence Score: <b>{result.get('probability', 0) * 100:.1f}%</b></div>",
+                    unsafe_allow_html=True
+                )
+        except Exception as e:
+            st.markdown(
+                f"<div class='result-no'>⚠️ <b>Unable to connect to API</b>. "
+                f"Please verify the API is live. <br/><small>{e}</small></div>",
+                unsafe_allow_html=True
+            )
 
     st.markdown("</div>", unsafe_allow_html=True)
 
