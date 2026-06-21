@@ -155,6 +155,7 @@ with st.container():
                     "Credit_History": Credit_History,
                 }
                 try:
+                    with st.spinner("Predicting loan eligibility..."):
                     r = requests.post(API_URL, json=payload, timeout=20)
                     r.raise_for_status()
                     result = r.json()
