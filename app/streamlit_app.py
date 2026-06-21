@@ -1,5 +1,6 @@
 import streamlit as st
 import requests
+import time
 
 st.set_page_config(
     page_title="Loan Eligibility Predictor",
@@ -156,6 +157,7 @@ with st.container():
                 }
                 try:
                     with st.spinner("Predicting loan eligibility..."):
+                        time.sleep(2)
                     r = requests.post(API_URL, json=payload, timeout=20)
                     r.raise_for_status()
                     result = r.json()
