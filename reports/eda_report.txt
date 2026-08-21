@@ -1,0 +1,57 @@
+============================================================
+LOAN ELIGIBILITY DATASET - EDA REPORT
+============================================================
+
+1. Dataset Shape
+------------------------------
+Rows    : 614
+Columns : 13
+
+2. Column Information
+------------------------------
+Loan_ID               object
+Gender                object
+Married               object
+Dependents            object
+Education             object
+Self_Employed         object
+ApplicantIncome        int64
+CoapplicantIncome    float64
+LoanAmount           float64
+Loan_Amount_Term     float64
+Credit_History       float64
+Property_Area         object
+Loan_Status           object
+
+3. Missing Values
+------------------------------
+Loan_ID               0
+Gender               13
+Married               3
+Dependents           15
+Education             0
+Self_Employed        32
+ApplicantIncome       0
+CoapplicantIncome     0
+LoanAmount           22
+Loan_Amount_Term     14
+Credit_History       50
+Property_Area         0
+Loan_Status           0
+
+4. Duplicate Rows
+------------------------------
+0
+
+5. Numerical Summary
+------------------------------
+       ApplicantIncome  CoapplicantIncome  LoanAmount  Loan_Amount_Term  Credit_History
+count       614.000000         614.000000  592.000000         600.00000      564.000000
+mean       5403.459283        1621.245798  146.412162         342.00000        0.842199
+std        6109.041673        2926.248369   85.587325          65.12041        0.364878
+min         150.000000           0.000000    9.000000          12.00000        0.000000
+25%        2877.500000           0.000000  100.000000         360.00000        1.000000
+50%        3812.500000        1188.500000  128.000000         360.00000        1.000000
+75%        5795.000000        2297.250000  168.000000         360.00000        1.000000
+max       81000.000000       41667.000000  700.000000         480.00000        1.000000
+

@@ -1,0 +1,11 @@
+5-Fold Cross Validation
+========================================
+
+Fold 1: 0.8211
+Fold 2: 0.8130
+Fold 3: 0.8049
+Fold 4: 0.7642
+Fold 5: 0.8197
+
+Mean Accuracy : 0.8046
+Std Accuracy  : 0.0210
