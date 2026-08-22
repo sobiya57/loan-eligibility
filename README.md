@@ -58,8 +58,10 @@ flowchart TD
     B --> F[PDF Report]
     B --> G[Prediction History]
     B --> H[SHAP Explainability]
+```
 
-Architecture Flow
+### Architecture Flow
+
     The user enters loan application details in the Streamlit interface.
     Streamlit sends the application data to the FastAPI /predict endpoint.
     FastAPI validates the request and passes the data to the trained ML pipeline.
