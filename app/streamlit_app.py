@@ -1013,13 +1013,13 @@ col_predict, col_reset = st.columns(2)
 with col_predict:
     predict = st.button(
         "Predict",
-        width="stretch"
+        use_container_width=True
     )
 
 with col_reset:
     st.button(
         "Reset",
-        width="stretch",
+        use_container_width=True,
         on_click=reset_form
     )
 
