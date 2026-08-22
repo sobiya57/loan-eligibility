@@ -1267,7 +1267,7 @@ st.subheader("📋 Prediction History")
 if st.session_state.prediction_history:
     st.dataframe(
         st.session_state.prediction_history,
-        width="stretch",
+        use_container_width=True,
         hide_index=True,
         column_config={
             "Time": st.column_config.TextColumn(
