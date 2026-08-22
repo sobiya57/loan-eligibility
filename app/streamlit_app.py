@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-API_URL = "http://127.0.0.1:8000/predict"
+API_URL = API_URL = "https://loan-api-z9u8.onrender.com/predict"
 
 import os
 from PIL import Image
