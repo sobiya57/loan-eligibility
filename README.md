@@ -69,7 +69,7 @@ flowchart TD
     Streamlit displays the result, confidence level, prediction history, and explainability information.
     The user can also download a PDF prediction report.
 
-🖼️ Screenshots
+### 🖼️ Screenshots
     1. Streamlit Frontend
     <p align="center"> <img src="docs/ui_screenshot.png" alt="Streamlit Loan Eligibility UI" width="850"/> </p>
     2. Prediction Result
@@ -77,7 +77,7 @@ flowchart TD
     3. FastAPI Swagger Documentation
     <p align="center"> <img src="docs/swagger_screenshot.png" alt="FastAPI Swagger API Documentation" width="850"/> </p>
 
-🚀 Live Demo
+### 🚀 Live Demo
 | Component             | Link                                                                                         |
 | --------------------- | -------------------------------------------------------------------------------------------- |
 | 🌐 Streamlit Frontend | [https://loan-ui.onrender.com](https://loan-ui.onrender.com)                                 |
@@ -85,7 +85,7 @@ flowchart TD
 | 📚 Swagger API Docs   | [https://loan-api-z9u8.onrender.com/docs](https://loan-api-z9u8.onrender.com/docs)           |
 | 💻 GitHub Repository  | [https://github.com/sobiya57/loan-eligibility](https://github.com/sobiya57/loan-eligibility) |
 
-🧠 Tech Stack
+### 🧠 Tech Stack
 Frontend
 Streamlit
 HTML/CSS styling through Streamlit components
@@ -108,7 +108,7 @@ Version Control
 Git
 GitHub
 
-🤖 Machine Learning
+### 🤖 Machine Learning
 Model
 
 Random Forest Classifier
@@ -122,9 +122,11 @@ The application uses the trained pipeline for prediction and returns both:
 Approval decision
 Approval probability
 
-📊 Model Analysis & Reports
+### 📊 Model Analysis & Reports
 
-The repository contains model analysis and evaluation artifacts under reports/.
+The repository contains model analysis and evaluation artifacts under `reports/`.
+
+```text
 reports/
 ├── confusion_matrix.png
 ├── cross_validation.txt
@@ -134,17 +136,17 @@ reports/
 ├── roc_curve.png
 ├── shap_bar.png
 └── shap_summary.png
-
+```
 These files document:
 
-Exploratory data analysis
-Cross-validation results
-Confusion matrix
-ROC curve
-Feature importance
-SHAP explainability
+- Exploratory data analysis
+- Cross-validation results
+- Confusion matrix
+- ROC curve
+- Feature importance
+- SHAP explainability
 
-🔎 Model Explainability
+### 🔎 Model Explainability
 
 The Streamlit application includes a SHAP Model Explainability section.
 
@@ -152,23 +154,23 @@ The application displays SHAP visualizations to help explain which features cont
 
 Available explainability artifacts include:
 
-SHAP Summary Plot
-SHAP Feature Importance Plot
+- SHAP Summary Plot
+- SHAP Feature Importance Plot
 
-📄 PDF Prediction Report
+### 📄 PDF Prediction Report
 
 After making a prediction, users can download a PDF report containing:
 
-Prediction date
-Prediction decision
-Approval probability
-Confidence level
-Applicant details
-Loan details
-Property information
-Credit history
+- Prediction date
+- Prediction decision
+- Approval probability
+- Confidence level
+- Applicant details
+- Loan details
+- Property information
+- Credit history
 
-🕘 Prediction History
+### 🕘 Prediction History
 
 The application maintains a session-based Prediction History table containing previous predictions and their associated application information.
 
@@ -184,7 +186,7 @@ Applicant Income must be greater than 0.
 
 Invalid input is stopped before a prediction request is submitted.
 
-⚙️ API
+### ⚙️ API
 POST /predict
 
 The FastAPI backend exposes the main prediction endpoint:
@@ -197,7 +199,7 @@ Example response:
 Interactive API documentation is available at:
 https://loan-api-z9u8.onrender.com/docs
 
-💻 Run Locally
+### 💻 Run Locally
 1. Clone the repository
 git clone https://github.com/sobiya57/loan-eligibility.git
 cd loan-eligibility
@@ -211,8 +213,10 @@ pip install -r requirements.txt
 uvicorn app.api:app --reload
 The local API will be available at:
 http://127.0.0.1:8000
+
 Swagger documentation:
 http://127.0.0.1:8000/docs
+
 6. Start the Streamlit frontend
 
 Open another terminal:
@@ -221,7 +225,7 @@ The Streamlit application will normally open at:
 
 http://localhost:8501
 
-📁 Project Structure
+### 📁 Project Structure
 
 loan-eligibility/
 │
@@ -265,7 +269,7 @@ loan-eligibility/
 ├── README.md
 └── requirements.txt
 
-🧪 Validation & Testing
+### 🧪 Validation & Testing
 
 The deployed application has been tested for:
 
@@ -283,23 +287,25 @@ The deployed application has been tested for:
 ✅ Streamlit–FastAPI integration
 ✅ Render deployment
 
-☁️ Deployment
+### ☁️ Deployment
 
 The project is deployed as two services on Render:
 
-Streamlit Frontend
+**Streamlit Frontend**
 https://loan-ui.onrender.com
-FastAPI Backend
+
+**FastAPI Backend**
 https://loan-api-z9u8.onrender.com
+
 The Streamlit frontend communicates with the deployed FastAPI backend to perform predictions.
 
-🤝 Contributing
+### 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome.
 
 Feel free to fork the repository and submit a pull request.
 
-👩‍💻 Author
+### 👩‍💻 Author
 
 Sobiya Begum
 
