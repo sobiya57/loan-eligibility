@@ -227,6 +227,7 @@ http://localhost:8501
 
 ### 📁 Project Structure
 
+```text
 loan-eligibility/
 │
 ├── app/
@@ -268,9 +269,11 @@ loan-eligibility/
 │   └── config.toml
 ├── README.md
 └── requirements.txt
+```
 
 ### 🧪 Validation & Testing
 
+```text
 The deployed application has been tested for:
 
 ✅ Approved loan prediction
@@ -286,6 +289,7 @@ The deployed application has been tested for:
 ✅ Swagger API documentation
 ✅ Streamlit–FastAPI integration
 ✅ Render deployment
+```
 
 ### ☁️ Deployment
 
